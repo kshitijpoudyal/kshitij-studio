@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Kshitij Studio</title>
+  <meta name="description" content="Software engineer building clean, modern web and mobile apps."/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "background":               "#f9f9f9",
+            "surface":                  "#f9f9f9",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low":    "#f3f3f3",
+            "surface-container":        "#eeeeee",
+            "surface-container-high":   "#e8e8e8",
+            "surface-container-highest":"#e2e2e2",
+            "surface-dim":              "#dadada",
+            "on-surface":               "#1a1c1c",
+            "on-surface-variant":       "#4c4546",
+            "outline":                  "#7e7576",
+            "outline-variant":          "#cfc4c5",
+            "primary":                  "#000000",
+            "on-primary":               "#ffffff",
+            "primary-container":        "#1b1b1b",
+            "secondary":                "#536253",
+            "secondary-container":      "#d3e4d1",
+            "on-secondary-container":   "#576757",
+            "inverse-surface":          "#2f3131",
+            "inverse-on-surface":       "#f1f1f1",
+            "inverse-primary":          "#c6c6c6",
+          },
+          fontFamily: {
+            sans:    ["Manrope", "sans-serif"],
+            display: ["Inter", "sans-serif"],
+          },
+          maxWidth: {
+            site: "1280px",
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body    { font-family: "Manrope", sans-serif; }
+    .f-disp { font-family: "Inter", sans-serif; }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+  <!-- ─────────────────────────── HEADER / NAV ─────────────────────────── -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-xl border-b border-black/[0.06]">
+    <nav class="max-w-site mx-auto px-6 md:px-10 lg:px-20 h-[72px] flex items-center justify-between">
+
+      <a href="/" class="f-disp text-base font-bold tracking-tight text-on-surface">
+        Kshitij Studio
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 list-none">
+        <li><a href="/"            class="f-disp text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors duration-200">Home</a></li>
+        <li><a href="/work.html"   class="f-disp text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors duration-200">Work</a></li>
+        <li><a href="/about.html"  class="f-disp text-sm font-semibold text-on-surface border-b border-on-surface pb-0.5">About</a></li>
+        <li><a href="/contact.html"class="f-disp text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors duration-200">Contact</a></li>
+      </ul>
+
+      <a href="/contact.html" class="hidden md:inline-flex items-center px-5 py-2 bg-primary text-on-primary rounded-lg f-disp text-sm font-semibold hover:opacity-80 transition-opacity duration-200">
+        Get in Touch
+      </a>
+
+      <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" class="md:hidden p-1.5 -mr-1.5 text-on-surface">
+        <svg id="icon-menu"  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-black/[0.06] bg-white/95 backdrop-blur-xl">
+      <ul class="max-w-site mx-auto px-6 py-6 flex flex-col gap-5 list-none">
+        <li><a href="/"            class="f-disp text-sm font-medium text-on-surface-variant">Home</a></li>
+        <li><a href="/work.html"   class="f-disp text-sm font-medium text-on-surface-variant">Work</a></li>
+        <li><a href="/about.html"  class="f-disp text-sm font-semibold text-on-surface">About</a></li>
+        <li><a href="/contact.html"class="f-disp text-sm font-medium text-on-surface-variant">Contact</a></li>
+        <li class="pt-1">
+          <a href="/contact.html" class="inline-flex items-center justify-center w-full px-5 py-2.5 bg-primary text-on-primary rounded-lg f-disp text-sm font-semibold">
+            Get in Touch
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ─────────────────────────────── HERO ──────────────────────────────── -->
+    <section class="max-w-site mx-auto px-6 md:px-10 lg:px-20 pt-40 pb-20 md:pt-48 md:pb-24">
+      <div class="max-w-3xl">
+        <h1 class="f-disp text-[52px] md:text-[66px] leading-[1.08] font-bold tracking-[-0.02em] text-on-surface mb-6">
+          Software engineer building clean, modern web and mobile apps.
+        </h1>
+        <p class="text-lg leading-relaxed text-on-surface-variant max-w-xl">
+          I focus on creating tools that make everyday workflows simpler.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─────────────────────── FULL-WIDTH IMAGE BREAK ───────────────────── -->
+    <!-- Replace with a real photo -->
+    <div class="w-full h-[480px] md:h-[560px] overflow-hidden">
+      <img
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWU-4rju88V27UVSTLz3iM0pyKwVsEt4ZmoA9ZnhPpSOhU_KoCNDB-oSb8B7SvlWSfNCaTbVWde3l8nv3-OFfTdjyBo7FNdsGYH-eQ84tsa7QeQXtSjRoR-fHL2dQT8vFGW-hpOM557cO6LRmtL93bSu8JJdArGUsxrQ7-ovhs8dP9a4ZWShHOF8FL7oNJaoxwVXJaKKHpcYT5VPSA4IKqURDh5T-nF9ERGAVjfkWAPRq5ETRc2tvPL0ES6gb43A3hovfLMA4PKKQ"
+        alt="Minimalist workspace with clean desk setup and natural light"
+        class="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700"
+      />
+    </div>
+
+    <!-- ─────────────────────────────── ABOUT ─────────────────────────────── -->
+    <section class="max-w-site mx-auto px-6 md:px-10 lg:px-20 py-24 md:py-32">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-16">
+        <div class="md:col-span-3">
+          <span class="f-disp text-[11px] font-bold uppercase tracking-[0.12em] text-secondary">About</span>
+        </div>
+        <div class="md:col-span-8">
+          <p class="text-lg leading-relaxed text-on-surface">
+            I'm a software engineer focused on building practical digital tools that bridge the gap between everyday life and the digital world.
+          </p>
+          <p class="text-base leading-relaxed text-on-surface-variant mt-5">
+            My work sits at the intersection of product thinking and engineering. I care about how things look, how they feel, and most importantly, how useful they are in real life. I'm drawn to simple, well-designed solutions that solve real problems without unnecessary complexity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────── APPROACH ─────────────────────────────── -->
+    <section class="bg-surface-container-low py-24 md:py-32">
+      <div class="max-w-site mx-auto px-6 md:px-10 lg:px-20">
+
+        <div class="mb-16">
+          <span class="f-disp text-[11px] font-bold uppercase tracking-[0.12em] text-secondary block mb-4">Approach</span>
+          <h2 class="f-disp text-[28px] md:text-[32px] leading-[1.2] font-semibold tracking-[-0.01em] text-on-surface max-w-lg">
+            I believe good software should feel intuitive, not overwhelming.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20">
+            <h3 class="f-disp text-base font-semibold text-on-surface mb-2">Clean interfaces</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Keeping interfaces simple and easy to use — removing noise so the core experience comes through clearly.</p>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20">
+            <h3 class="f-disp text-base font-semibold text-on-surface mb-2">Real-life use cases</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Building with real workflows in mind, not hypothetical ones. The best tools come from genuine friction.</p>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20">
+            <h3 class="f-disp text-base font-semibold text-on-surface mb-2">Clarity over features</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Prioritizing clarity and usefulness over feature lists. Fewer things done well beats more things done poorly.</p>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20">
+            <h3 class="f-disp text-base font-semibold text-on-surface mb-2">Built to actually use</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Creating tools that I would actually use myself — that bar keeps the work honest and grounded.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ──────────────────────────── JOURNEY ──────────────────────────────── -->
+    <section class="max-w-site mx-auto px-6 md:px-10 lg:px-20 py-24 md:py-32">
+      <div class="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+        <!-- Replace with a real photo -->
+        <div class="aspect-square bg-surface-container rounded-3xl overflow-hidden relative">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWye9zs4OyQ4ck5_A75S-_6khIjS4h8A2YmBwNdkIEbhoMU9cRNBV_kCazpwqXHLKrzs1yj3qhTSTzyf6bbWtVCbE5uaD8BxCAHAWUPsyeP5b3t0EV9u_58mVJ8GumcY_-fVxaSpjMtl-VulwSer6dbbHgeeV2-WZ3uHX-u2p_pygqs4NsQ8dzR2qS5umePmkMEVmeudMNxNwz5JKp-ksSJ_D8ImJr9LicjMXmcSe3nBYWBouuH8nGZj9agu8uQP7Nu9bcz-vIDuE"
+            alt="Lines of code on screen — a focus on craft and precision in development"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div>
+          <span class="f-disp text-[11px] font-bold uppercase tracking-[0.12em] text-secondary block mb-5">Journey</span>
+          <h2 class="f-disp text-[28px] md:text-[32px] leading-[1.2] font-semibold tracking-[-0.01em] text-on-surface mb-6">
+            Born from curiosity, shaped by craft.
+          </h2>
+          <div class="space-y-5 text-on-surface-variant leading-relaxed">
+            <p>
+              I started with a curiosity about how the digital world works and gradually moved into building for it.
+            </p>
+            <p>
+              Over time, that curiosity turned into a focus on web and mobile applications — spaces where small design and usability decisions make a big difference. As I built more, I found myself naturally drawn toward creating tools that solve everyday problems, not just technical challenges.
+            </p>
+            <p>
+              That shift shaped how I approach everything I build today.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── WHAT I WORK ON ────────────────────────── -->
+    <section class="max-w-site mx-auto px-6 md:px-10 lg:px-20 pb-24 md:pb-32">
+      <div class="mb-12">
+        <span class="f-disp text-[11px] font-bold uppercase tracking-[0.12em] text-secondary block mb-4">What I Work On</span>
+        <h2 class="f-disp text-[28px] md:text-[32px] leading-[1.2] font-semibold tracking-[-0.01em] text-on-surface max-w-lg">
+          A lot of my work comes from things I want to solve in my own life.
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20">
+          <h3 class="f-disp text-base font-semibold text-on-surface mb-3">Personal Tools</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Tools that start small but have the potential to grow — built to solve real friction in my own workflow.</p>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20">
+          <h3 class="f-disp text-base font-semibold text-on-surface mb-3">Public Products</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Consumer-facing apps that others can use in their daily workflows — built with a wide range of users in mind.</p>
+        </div>
+        <div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20">
+          <h3 class="f-disp text-base font-semibold text-on-surface mb-3">Client Applications</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed">Client-facing systems where I contribute to real-world, large-scale products used by millions of people.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────── CLIENT CONTRIBUTIONS ──────────────────────── -->
+    <section class="bg-primary py-24 md:py-32">
+      <div class="max-w-site mx-auto px-6 md:px-10 lg:px-20">
+        <div class="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
+
+          <div class="md:col-span-4">
+            <span class="f-disp text-[11px] font-bold uppercase tracking-[0.12em] text-on-primary/50 block mb-4">Client Contributions</span>
+            <h2 class="f-disp text-[28px] md:text-[32px] leading-[1.2] font-semibold tracking-[-0.01em] text-on-primary mb-6">
+              Building for real-world scale.
+            </h2>
+            <p class="text-on-primary/60 text-sm leading-relaxed">
+              Contributed to these products as part of client engagements through NTT DATA. These experiences shaped how I think about building reliable, scalable, user-focused applications.
+            </p>
+          </div>
+
+          <div class="md:col-span-8 grid grid-cols-2 md:grid-cols-2 gap-4">
+            <div class="border border-on-primary/10 rounded-xl p-6 hover:bg-on-primary/5 transition-colors duration-200">
+              <span class="f-disp text-xl font-bold text-on-primary">Levi's</span>
+              <p class="text-on-primary/50 text-xs mt-1.5">Shopping Mobile App</p>
+            </div>
+            <div class="border border-on-primary/10 rounded-xl p-6 hover:bg-on-primary/5 transition-colors duration-200">
+              <span class="f-disp text-xl font-bold text-on-primary">PG&amp;E</span>
+              <p class="text-on-primary/50 text-xs mt-1.5">Utility Web Platform</p>
+            </div>
+            <div class="border border-on-primary/10 rounded-xl p-6 hover:bg-on-primary/5 transition-colors duration-200">
+              <span class="f-disp text-xl font-bold text-on-primary">UPS</span>
+              <p class="text-on-primary/50 text-xs mt-1.5">Logistics Platform</p>
+            </div>
+            <div class="border border-on-primary/10 rounded-xl p-6 hover:bg-on-primary/5 transition-colors duration-200">
+              <span class="f-disp text-xl font-bold text-on-primary">Etsy</span>
+              <p class="text-on-primary/50 text-xs mt-1.5">Web App</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────── CLOSING / CTA ──────────────────────────── -->
+    <section class="max-w-site mx-auto px-6 md:px-10 lg:px-20 py-24 md:py-32 text-center">
+      <div class="max-w-xl mx-auto">
+        <p class="text-xl md:text-2xl text-on-surface leading-relaxed mb-10">
+          I'm always looking to build tools that simplify real-life problems through thoughtful design and clean execution.
+        </p>
+        <a href="/contact.html" class="inline-flex items-center gap-2 f-disp text-base font-semibold text-on-surface border-b-2 border-outline-variant pb-1 hover:border-on-surface transition-colors duration-200">
+          Start a conversation
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─────────────────────────────── FOOTER ───────────────────────────────── -->
+  <footer class="bg-white border-t border-black/[0.06] py-14 px-6 md:px-10 lg:px-20">
+    <div class="max-w-site mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-center md:text-left">
+        <span class="f-disp font-bold text-on-surface">Kshitij Studio</span>
+        <p class="text-xs text-on-surface-variant mt-1.5 tracking-wide">
+          &copy; 2025 Kshitij Studio. All rights reserved.
+        </p>
+      </div>
+      <div class="flex items-center gap-8">
+        <a href="https://github.com/kshitijpoudyal" class="f-disp text-xs font-medium uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors duration-200">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/kshitij-poudyal/" class="f-disp text-xs font-medium uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors duration-200">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle    = document.getElementById("menu-toggle");
+    const menu      = document.getElementById("mobile-menu");
+    const iconMenu  = document.getElementById("icon-menu");
+    const iconClose = document.getElementById("icon-close");
+
+    toggle.addEventListener("click", () => {
+      const isOpen = !menu.classList.contains("hidden");
+      menu.classList.toggle("hidden", isOpen);
+      iconMenu.classList.toggle("hidden", !isOpen);
+      iconClose.classList.toggle("hidden", isOpen);
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+    });
+  </script>
+
+</body>
+</html>

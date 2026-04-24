@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/a266352/kay/kshitij-studio log --oneline -5)",
+      "Bash(ls:*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

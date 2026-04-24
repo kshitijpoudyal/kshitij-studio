@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
+@layer components {
+  .f-disp {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .input-line {
+    border: none;
+    border-bottom: 1px solid #cfc4c5;
+    background: transparent;
+    border-radius: 0;
+    padding: 0.75rem 0;
+    width: 100%;
+    font-size: 0.9375rem;
+    color: #1a1c1c;
+    transition: border-color 0.25s ease;
+    -webkit-appearance: none;
+  }
+
+  .input-line::placeholder {
+    color: #b0aaab;
+  }
+
+  .input-line:focus {
+    outline: none;
+    border-bottom-color: #536253;
+    box-shadow: none;
+  }
+}
