@@ -4,7 +4,6 @@ import { pageTransition, staggerContainer, staggerItem, wordVariant } from '../l
 import AnimatedSection from '../components/AnimatedSection'
 import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
-import { clients } from '../data/clients'
 
 const heroHeadline = 'Bridging everyday life and the digital world through clean, modern apps.'
 const heroSubheadline = 'I design and build web and mobile experiences that simplify complexity and improve how people get things done.'
@@ -31,7 +30,6 @@ export default function Home() {
               transition={{ repeat: Infinity, duration: 2.2, ease: 'easeInOut' }}
               className="w-2 h-2 rounded-full bg-secondary block shrink-0"
             />
-            <span className="f-disp text-xs font-semibold">Available for projects</span>
           </motion.div>
 
           {/* Headline — word by word stagger */}
