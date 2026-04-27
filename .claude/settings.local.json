@@ -5,7 +5,10 @@
       "Bash(ls:*)",
       "Bash(npm install:*)",
       "Bash(git config:*)",
-      "Bash(git remote:*)"
+      "Bash(git remote:*)",
+      "Bash(npm run:*)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(npx tsc:*)"
     ]
   }
 }

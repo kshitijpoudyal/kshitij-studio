@@ -28,6 +28,7 @@ export interface Client {
 export interface NavItem {
   label: string
   to: string
+  hash?: string
 }
 
 export interface SocialLink {

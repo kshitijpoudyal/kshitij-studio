@@ -4,9 +4,25 @@ import { pageTransition, staggerContainer, staggerItem, wordVariant } from '../l
 import AnimatedSection from '../components/AnimatedSection'
 import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
+const values = [
+  {
+    number: '01',
+    title: 'Simplify First',
+    body: 'Remove friction before adding features. Good software stays out of the way.',
+  },
+  {
+    number: '02',
+    title: 'Build to Last',
+    body: 'Code written for the next engineer, not just the deadline.',
+  },
+  {
+    number: '03',
+    title: 'Ship What Works',
+    body: 'A working product beats a perfect one that never ships.',
+  },
+]
 
 const heroHeadline = 'Bridging everyday life and the digital world through clean, modern apps.'
-const heroSubheadline = 'I design and build web and mobile experiences that simplify complexity and improve how people get things done.'
 
 export default function Home() {
   const featured = projects.filter((p) => p.featured)
@@ -17,24 +33,9 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="max-w-site mx-auto px-6 md:px-10 lg:px-20 pt-40 pb-24 md:pt-48 md:pb-32">
         <div className="max-w-3xl">
-
-          {/* Availability badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05, duration: 0.4 }}
-            className="inline-flex items-center gap-2 bg-secondary-container/60 text-on-secondary-container px-3 py-1.5 rounded-full mb-8"
-          >
-            <motion.span
-              animate={{ scale: [1, 1.45, 1], opacity: [1, 0.45, 1] }}
-              transition={{ repeat: Infinity, duration: 2.2, ease: 'easeInOut' }}
-              className="w-2 h-2 rounded-full bg-secondary block shrink-0"
-            />
-          </motion.div>
-
           {/* Headline — word by word stagger */}
           <motion.h1
-            className="f-disp text-[52px] md:text-[66px] leading-[1.08] font-bold tracking-[-0.02em] text-on-surface mb-7"
+            className="f-disp text-[52px] md:text-[66px] leading-[1.08] font-bold tracking-[-0.02em] text-on-surface mb-12"
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.048, delayChildren: 0.15 } } }}
             initial="hidden"
             animate="visible"
@@ -49,16 +50,6 @@ export default function Home() {
               </motion.span>
             ))}
           </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.72, duration: 0.5 }}
-            className="text-lg leading-relaxed text-on-surface-variant max-w-xl mb-12"
-          >
-            {heroSubheadline}
-          </motion.p>
 
           {/* CTAs */}
           <motion.div
@@ -87,42 +78,76 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PHILOSOPHY ── */}
-      <section className="max-w-site mx-auto px-6 md:px-10 lg:px-20 py-24 md:py-32">
-        <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+      {/* ── ABOUT / BIO ── */}
+      <section id="about" className="max-w-site mx-auto px-6 md:px-10 lg:px-20 py-24 md:py-32">
+        <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
 
           <AnimatedSection delay={0}>
             <span className="f-disp text-[11px] font-bold uppercase tracking-[0.12em] text-secondary block mb-5">
-              Philosophy
+              About
             </span>
             <h2 className="f-disp text-[32px] leading-[1.2] font-semibold tracking-[-0.01em] text-on-surface mb-6">
-              Designing for utility, building for longevity.
+              The engineer behind the studio.
             </h2>
+            <p className="text-on-surface-variant leading-relaxed">
+              I build software that reduces friction and fits naturally into daily life —
+              at work for enterprise clients, and at home for the everyday workflows that matter.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.15}>
             <div className="space-y-5 text-on-surface-variant leading-relaxed">
               <p>
-                At Kshitij Studio, the approach is rooted in simplifying the friction of daily life.
-                I believe software shouldn't just be functional — it should be an invisible partner
-                in your workflow.
+                I'm a software engineer specializing in web and mobile, currently building products
+                through NTT DATA for large enterprise clients. Outside of work, I create personal
+                tools—apps that solve small, everyday problems most people overlook.
               </p>
               <p>
-                Every design decision and every line of code is measured against a simple question:
-                does this make the user's life tangibly better? That commitment to intentionality
-                ensures every product feels both purposeful and premium.
+                I build across the stack, developing web and mobile apps across all major platforms,
+                along with the backend services that power them. I care about craftsmanship at every
+                layer: clean architecture, thoughtful APIs, and interfaces that feel effortless.
+              </p>
+              <p>
+                When I'm not building, I'm thinking about what to build next. The best ideas come
+                from friction you experience yourself—and there's always more to remove.
               </p>
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.18}>
-            <div className="aspect-square bg-surface-container rounded-3xl overflow-hidden relative group">
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOzTHQ9SJvZixrhOLwx7KB06MUlfe_78lWz9A4gQRrncbtnA_cdQSLJZA2k63fEY7CczqgP1_HL2GZmLpcAuTqL0KFNqaflRu-aYY2q6YQ40fqphVDLEhyeVen6rrNFpttNdAsmVw0bxoNuoSNwnTHxpH5pZDMqm2Fa4O4yrCgUtTViGTNaGopzkctJIyjB4dGhH_rIlkCTe5sPF2Ew-P7S4wV9zy-VsnBvo2nNTIPhOUecYG1C8jiiJ4Ny9CJVRBXeYtiLjC7KZQ"
-                alt="Minimalist home office workspace with clean desk setup and soft natural light"
-                loading="lazy"
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-surface/40 to-transparent pointer-events-none" />
-            </div>
+        </div>
+      </section>
+
+      {/* ── HOW I WORK ── */}
+      <section className="bg-surface-container-low py-20 md:py-28">
+        <div className="max-w-site mx-auto px-6 md:px-10 lg:px-20">
+
+          <AnimatedSection>
+            <span className="f-disp text-[11px] font-bold uppercase tracking-[0.12em] text-secondary block mb-12 text-center">
+              How I work
+            </span>
           </AnimatedSection>
+
+          <motion.div
+            className="grid md:grid-cols-3 gap-6"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+          >
+            {values.map((v) => (
+              <motion.div
+                key={v.number}
+                variants={staggerItem}
+                className="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/20"
+              >
+                <span className="f-disp text-[11px] font-bold tracking-[0.1em] text-outline block mb-4">
+                  {v.number}
+                </span>
+                <h3 className="f-disp text-lg font-semibold text-on-surface mb-3">{v.title}</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">{v.body}</p>
+              </motion.div>
+            ))}
+          </motion.div>
 
         </div>
       </section>
@@ -191,18 +216,12 @@ export default function Home() {
           <div className="max-w-lg mx-auto">
 
             <AnimatedSection delay={0}>
-              <h2 className="f-disp text-[44px] md:text-[58px] leading-[1.1] font-bold tracking-[-0.02em] text-on-primary mb-5">
+              <h2 className="f-disp text-[44px] md:text-[58px] leading-[1.1] font-bold tracking-[-0.02em] text-on-primary mb-10">
                 Have a project in mind?
               </h2>
             </AnimatedSection>
 
             <AnimatedSection delay={0.14}>
-              <p className="text-on-primary/60 leading-relaxed mb-12 text-base">
-                Open to select freelance projects and collaborations. Let's build something useful together.
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.25}>
               <motion.div
                 className="inline-block"
                 whileHover={{ scale: 1.02 }}

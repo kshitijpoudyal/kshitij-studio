@@ -2,9 +2,8 @@ import type { NavItem, SocialLink } from '../types'
 
 export const navItems: NavItem[] = [
   { label: 'Home', to: '/' },
+  { label: 'About', to: '/', hash: 'about' },
   { label: 'Work', to: '/work' },
-  { label: 'About', to: '/about' },
-  { label: 'Contact', to: '/contact' },
 ]
 
 export const socialLinks: SocialLink[] = [

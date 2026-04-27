@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { navItems } from '../data/navigation'
 import { useScrolled } from '../hooks/useScrolled'
@@ -8,6 +8,19 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const scrolled = useScrolled(16)
   const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleHashNav = (hash: string) => {
+    setIsMenuOpen(false)
+    if (location.pathname !== '/') {
+      navigate('/')
+      setTimeout(() => {
+        document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 400)
+    } else {
+      document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -38,26 +51,35 @@ export default function Header() {
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-8 list-none">
           {navItems.map((item) => {
-            const isActive = location.pathname === item.to
+            const isActive = !item.hash && location.pathname === item.to
             return (
-              <li key={item.to}>
-                <Link
-                  to={item.to}
-                  className={`relative f-disp text-sm font-semibold transition-colors duration-200 inline-block py-1 ${
-                    isActive
-                      ? 'text-on-surface'
-                      : 'text-on-surface-variant hover:text-on-surface'
-                  }`}
-                >
-                  {item.label}
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-active-line"
-                      className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-on-surface rounded-full"
-                      transition={{ type: 'spring', bounce: 0.15, duration: 0.4 }}
-                    />
-                  )}
-                </Link>
+              <li key={item.label}>
+                {item.hash ? (
+                  <button
+                    onClick={() => handleHashNav(item.hash!)}
+                    className="relative f-disp text-sm font-semibold transition-colors duration-200 inline-block py-1 text-on-surface-variant hover:text-on-surface"
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    to={item.to}
+                    className={`relative f-disp text-sm font-semibold transition-colors duration-200 inline-block py-1 ${
+                      isActive
+                        ? 'text-on-surface'
+                        : 'text-on-surface-variant hover:text-on-surface'
+                    }`}
+                  >
+                    {item.label}
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-active-line"
+                        className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-on-surface rounded-full"
+                        transition={{ type: 'spring', bounce: 0.15, duration: 0.4 }}
+                      />
+                    )}
+                  </Link>
+                )}
               </li>
             )
           })}
@@ -135,21 +157,30 @@ export default function Header() {
             <ul className="max-w-site mx-auto px-6 py-6 flex flex-col gap-5 list-none">
               {navItems.map((item, i) => (
                 <motion.li
-                  key={item.to}
+                  key={item.label}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.04 + i * 0.055, duration: 0.28 }}
                 >
-                  <Link
-                    to={item.to}
-                    className={`f-disp text-sm font-semibold ${
-                      location.pathname === item.to
-                        ? 'text-on-surface'
-                        : 'text-on-surface-variant'
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
+                  {item.hash ? (
+                    <button
+                      onClick={() => handleHashNav(item.hash!)}
+                      className="f-disp text-sm font-semibold text-on-surface-variant"
+                    >
+                      {item.label}
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.to}
+                      className={`f-disp text-sm font-semibold ${
+                        location.pathname === item.to
+                          ? 'text-on-surface'
+                          : 'text-on-surface-variant'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </motion.li>
               ))}
               <motion.li

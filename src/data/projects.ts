@@ -73,7 +73,7 @@ export const projects: Project[] = [
     imageUrl: null,
     imageAlt: 'PeakPawChew — premium dog chew brand e-commerce storefront',
     featured: false,
-    href: 'https://www.PeakPawChew.com',
+    href: 'https://peakpawschew.com',
     year: 2024,
     status: 'live',
     tags: ['React', 'TypeScript', 'Shopify'],

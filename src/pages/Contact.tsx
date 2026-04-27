@@ -43,13 +43,9 @@ export default function Contact() {
           <span className="f-disp text-[11px] font-bold uppercase tracking-[0.12em] text-secondary block mb-5">
             Contact
           </span>
-          <h1 className="f-disp text-[44px] md:text-[60px] leading-[1.08] font-bold tracking-[-0.02em] text-on-surface mb-5">
+          <h1 className="f-disp text-[44px] md:text-[60px] leading-[1.08] font-bold tracking-[-0.02em] text-on-surface">
             Let's build something useful.
           </h1>
-          <p className="text-lg text-on-surface-variant leading-relaxed max-w-xl">
-            Open to freelance projects, consulting engagements, and interesting collaborations.
-            If you have something worth building, I'd love to hear about it.
-          </p>
         </AnimatedSection>
       </section>
 
@@ -211,9 +207,8 @@ export default function Contact() {
                     Open to select projects
                   </span>
                 </div>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Currently taking on freelance and consulting work. Response time is typically
-                  within 1–2 business days.
+                <p className="text-sm text-on-surface-variant">
+                  Response time: 1–2 business days.
                 </p>
               </div>
 
@@ -253,26 +248,6 @@ export default function Contact() {
                     </motion.a>
                   ))}
                 </div>
-              </div>
-
-              {/* What to expect */}
-              <div className="bg-surface-container-low rounded-xl p-6 border border-outline-variant/20">
-                <span className="f-disp text-[11px] font-bold uppercase tracking-[0.12em] text-secondary block mb-4">
-                  What to expect
-                </span>
-                <ul className="space-y-3">
-                  {[
-                    'Quick turnaround on initial response',
-                    'Honest assessment of scope and fit',
-                    'Clean code and thoughtful architecture',
-                    'Regular communication throughout',
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-sm text-on-surface-variant">
-                      <span className="w-1 h-1 rounded-full bg-secondary mt-2 shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
 
             </div>
