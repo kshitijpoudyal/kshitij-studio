@@ -8,14 +8,13 @@ export const projects: Project[] = [
     group: 'Public Product',
     description:
       'Add recipes and build a weekly meal schedule. Built for home cooks who want a clean, organized way to plan their week.',
-    imageUrl:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDn_FvWCcfXJ1iDvfExI_v7C-Ph_cS97eBpBWkvJSrxy92XaZz2nPAEqYQT_ipp9l9Fu0KDaP1eFOJ5kq6VVten8m-z-XaSv8GmReiDxhVCxPorUR5kj-eWyAlcHPtfvIZmspyG2PF2yZetWymwSeirsrWGLDln8A-vuCGstXC2O7TjAAN478KlonsijwW5ZlOmRPts2LLvxevbjxb-Hjd4-DFbm9e23CNCILjG7RYT3JKkeeWtrr6NntUsq0q8Ni1MdXFi0O81QkI',
+    imageUrl: '/recipe-page-thumbnail.png',
     imageAlt: 'Recipe Page — clean recipe management and weekly meal scheduling interface',
     featured: true,
     href: 'https://recipe.kshitijstudio.com',
     year: 2024,
     status: 'live',
-    tags: ['React', 'TypeScript', 'Supabase'],
+    tags: ['React', 'Tailwind CSS', 'Firebase'],
   },
   {
     id: 'hustle-books',
@@ -25,13 +24,13 @@ export const projects: Project[] = [
     description:
       'Track expenses, taxes, and income across multiple side hustles. Built for freelancers and creators who want simple financial clarity.',
     imageUrl:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuATbjel-qRMtTkxe_zU4d8j4B0eo4cYN1FOAjh-3LRLA1qEK-8yS8cgu459CKuyCvhINJbOraMWkFnGztvanBXPC_XuKp6vFUtsTV7bx_LuCrxbi715FTbvgjjo7SuXRrJY2NdM5RbBgwvPcGDgKh4Eb42IN_F4FKt77W1n-HmFzazPZCi7wGJ7gz-shSjPAd2IaniNr8V93b_lnQU_pLbcObadZZEWL4MYSaspENWfEjwXXdk6I0CyQFXfKN5aX_h9Mh24ZpgZpuU',
+      '/hustle-books-thumbnail.png',
     imageAlt: 'Hustle Books — expense tracking and income dashboard for side hustles',
     featured: true,
     href: 'https://hustlebooks.kshitijstudio.com',
     year: 2024,
     status: 'live',
-    tags: ['React Native', 'TypeScript', 'Node.js'],
+    tags: ['React', 'Tailwind CSS', 'Supabase'],
   },
   {
     id: 'wedding-budget-planner',
@@ -46,16 +45,16 @@ export const projects: Project[] = [
     href: 'https://weddingbudget.kshitijstudio.com',
     year: 2023,
     status: 'live',
-    tags: ['React', 'TypeScript'],
+    tags: ['React', 'Tailwind CSS', 'Firebase'],
   },
   {
     id: 'review-club',
     title: 'Review Club',
-    category: 'Consumer',
+    category: 'Personal Tool',
     group: 'Personal Tool',
     description:
       'Track review products, pending reviews, and refunds. Keeps the entire review lifecycle organized and easy to act on.',
-    imageUrl: null,
+    imageUrl: '/amazon-review-thumbnail.png',
     imageAlt: 'Review Club — review lifecycle tracking and management dashboard',
     featured: true,
     href: 'https://reviewclub.kshitijstudio.com',
@@ -70,12 +69,27 @@ export const projects: Project[] = [
     group: 'Client Work',
     description:
       'Full e-commerce experience for a premium dog chew brand. Clean product catalog, cart, and checkout designed to build brand trust and drive conversions.',
-    imageUrl: null,
+    imageUrl: '/peak-paw-chew-thumbnail.png',
     imageAlt: 'PeakPawChew — premium dog chew brand e-commerce storefront',
     featured: false,
     href: 'https://peakpawschew.com',
     year: 2024,
     status: 'live',
-    tags: ['React', 'TypeScript', 'Shopify'],
+    tags: ['React', 'Tailwind CSS', 'Stripe Integration'],
   },
+  {
+  id: 'new-special-eyebrows-beauty',
+  title: 'New Special Eyebrows & Beauty',
+  category: 'Service Business',
+  group: 'Client Work',
+  description:
+    'Elegant beauty salon website for a threading and skincare studio. Designed to showcase services, pricing, brand trust, and online booking in a polished, high-conversion experience.',
+  imageUrl: '/new-special-eyebrows-beauty-thumbnail.png',
+  imageAlt: 'New Special Eyebrows & Beauty — beauty salon website with premium booking experience',
+  featured: false,
+  href: 'https://new-special-eyebrows-and-beauty.vercel.app/',
+  year: 2025,
+  status: 'live',
+  tags: ['React', 'Tailwind CSS', 'Booking Flow'],
+},
 ]
